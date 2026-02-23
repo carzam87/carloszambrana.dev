@@ -1,0 +1,47 @@
+---
+const skillGroups = [
+  {
+    category: 'Backend',
+    skills: ['PHP', 'Laravel', 'Python', 'Django', 'Flask', 'Node.js', 'SQL'],
+  },
+  {
+    category: 'Frontend',
+    skills: ['JavaScript', 'TypeScript', 'Vue.js', 'React', 'Tailwind CSS', 'HTML5', 'CSS3'],
+  },
+  {
+    category: 'Databases',
+    skills: ['PostgreSQL', 'MySQL', 'Redis'],
+  },
+  {
+    category: 'Cloud & DevOps',
+    skills: ['AWS EC2', 'AWS Lambda', 'AWS S3', 'AWS RDS', 'Docker', 'CI/CD', 'Git', 'Linux'],
+  },
+];
+---
+
+<section id="skills" class="py-20 md:py-28 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-4">
+      Technical Skills
+    </h2>
+    <p class="text-gray-500 text-center max-w-2xl mx-auto mb-16">
+      Technologies and tools I use to deliver reliable, scalable solutions.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      {skillGroups.map((group) => (
+        <div>
+          <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
+            {group.category}
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            {group.skills.map((skill) => (
+              <span class="inline-block bg-white text-gray-700 px-4 py-2 rounded-lg text-sm font-medium border border-gray-200 hover:border-primary-300 hover:text-primary-600 transition-colors">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
