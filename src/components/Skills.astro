@@ -3,60 +3,51 @@ const skillGroups = [
   {
     category: 'Backend',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" /></svg>`,
-    accent: 'from-emerald-500 to-teal-600',
-    badgeColor: 'bg-emerald-50 text-emerald-700 border-emerald-200/80',
     skills: ['PHP', 'Laravel', 'Python', 'Django', 'Flask', 'Node.js', 'SQL'],
   },
   {
     category: 'Frontend',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" /></svg>`,
-    accent: 'from-sky-500 to-blue-600',
-    badgeColor: 'bg-sky-50 text-sky-700 border-sky-200/80',
     skills: ['JavaScript', 'TypeScript', 'Vue.js', 'React', 'Tailwind CSS', 'HTML5', 'CSS3'],
   },
   {
     category: 'Databases',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" /></svg>`,
-    accent: 'from-amber-500 to-orange-600',
-    badgeColor: 'bg-amber-50 text-amber-700 border-amber-200/80',
     skills: ['PostgreSQL', 'MySQL', 'Redis'],
   },
   {
     category: 'Cloud & DevOps',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" /></svg>`,
-    accent: 'from-violet-500 to-purple-600',
-    badgeColor: 'bg-violet-50 text-violet-700 border-violet-200/80',
     skills: ['AWS EC2', 'AWS Lambda', 'AWS S3', 'AWS RDS', 'Docker', 'CI/CD', 'Git', 'Linux'],
   },
 ];
 ---
 
-<section id="skills" class="py-20 md:py-28 bg-gray-900">
+<section id="skills" class="py-20 md:py-28 bg-white/50">
   <div class="max-w-6xl mx-auto px-6">
     <div class="max-w-2xl mb-16">
-      <p class="text-sm font-semibold text-primary-400 uppercase tracking-wider mb-3">Tech Stack</p>
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+      <p class="text-sm font-semibold text-primary-500 uppercase tracking-wider mb-3">Tech Stack</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-teal-text mb-4">
         Technical Skills
       </h2>
-      <p class="text-gray-400 text-lg leading-relaxed">
+      <p class="text-teal-muted text-lg leading-relaxed">
         Technologies and tools I use daily to deliver reliable, scalable solutions.
       </p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {skillGroups.map((group) => (
-        <div class="relative bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50 overflow-hidden group hover:border-gray-600/50 transition-colors">
-          <!-- Gradient accent top bar -->
-          <div class:list={["absolute top-0 left-0 right-0 h-1 bg-gradient-to-r", group.accent]}></div>
+        <div class="relative bg-white rounded-xl p-6 border border-teal-border overflow-hidden group hover:shadow-md transition-all">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-primary-500"></div>
 
           <div class="flex items-center gap-3 mb-5">
-            <div class:list={["w-9 h-9 rounded-lg bg-gradient-to-br flex items-center justify-center text-white", group.accent]} set:html={group.icon} />
-            <h3 class="text-sm font-bold text-white uppercase tracking-wider">
+            <div class="w-9 h-9 rounded-lg bg-primary-50 flex items-center justify-center text-primary-500" set:html={group.icon} />
+            <h3 class="text-sm font-bold text-teal-text uppercase tracking-wider">
               {group.category}
             </h3>
           </div>
           <div class="flex flex-wrap gap-2">
             {group.skills.map((skill) => (
-              <span class="inline-block px-3 py-1.5 rounded-lg text-sm font-medium bg-gray-700/50 text-gray-300 border border-gray-600/50 hover:bg-gray-700 hover:text-white transition-colors">
+              <span class="inline-block px-3 py-1.5 rounded-lg text-sm font-medium bg-mint text-teal-body border border-teal-border hover:bg-primary-50 hover:text-primary-600 hover:border-primary-300 transition-colors">
                 {skill}
               </span>
             ))}

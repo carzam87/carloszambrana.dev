@@ -41,39 +41,39 @@ const engagements = [
 ];
 ---
 
-<section id="experience" class="py-20 md:py-28 bg-white">
+<section id="experience" class="py-20 md:py-28">
   <div class="max-w-6xl mx-auto px-6">
     <div class="max-w-2xl mb-16">
-      <p class="text-sm font-semibold text-primary-600 uppercase tracking-wider mb-3">Experience</p>
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <p class="text-sm font-semibold text-primary-500 uppercase tracking-wider mb-3">Experience</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-teal-text mb-4">
         Client Engagements
       </h2>
-      <p class="text-gray-500 text-lg leading-relaxed">
+      <p class="text-teal-muted text-lg leading-relaxed">
         A track record of delivering impactful software for clients across industries.
       </p>
     </div>
 
     <div class="space-y-8">
       {engagements.map((engagement, i) => (
-        <div class="group relative rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow duration-300">
-          <div class="absolute top-0 left-0 w-1 h-full bg-primary-600"></div>
+        <div class="group relative rounded-xl border border-teal-border bg-white overflow-hidden hover:shadow-md transition-shadow duration-300">
+          <div class="absolute top-0 left-0 w-1 h-full bg-primary-500"></div>
           <div class="p-6 md:p-8 pl-8 md:pl-10">
             <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
               <div>
-                <h3 class="text-xl font-bold text-gray-900">{engagement.client}</h3>
-                <p class="text-sm font-medium text-gray-500 mt-1">{engagement.role}</p>
+                <h3 class="text-xl font-bold text-teal-text">{engagement.client}</h3>
+                <p class="text-sm font-medium text-teal-muted mt-1">{engagement.role}</p>
               </div>
-              <span class="inline-flex items-center px-3 py-1 rounded-full bg-primary-50 text-primary-700 text-sm font-medium mt-2 md:mt-0 self-start">
+              <span class="inline-flex items-center px-3 py-1 rounded-full bg-primary-50 text-primary-600 text-sm font-medium mt-2 md:mt-0 self-start">
                 {engagement.period}
               </span>
             </div>
 
-            <p class="text-gray-600 leading-relaxed mb-5">{engagement.description}</p>
+            <p class="text-teal-body leading-relaxed mb-5">{engagement.description}</p>
 
             <ul class="space-y-2 mb-5">
               {engagement.highlights.map((highlight) => (
-                <li class="flex items-start gap-2 text-sm text-gray-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <li class="flex items-start gap-2 text-sm text-teal-muted">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   {highlight}
@@ -83,7 +83,7 @@ const engagements = [
 
             <div class="flex flex-wrap gap-2">
               {engagement.tech.map((t) => (
-                <span class="inline-block px-2.5 py-1 rounded-md bg-gray-100 text-gray-600 text-xs font-medium">
+                <span class="inline-block px-2.5 py-1 rounded-md bg-mint text-teal-body text-xs font-medium border border-teal-border">
                   {t}
                 </span>
               ))}
